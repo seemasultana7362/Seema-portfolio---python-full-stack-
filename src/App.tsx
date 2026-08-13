@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BackgroundMotion } from './components/BackgroundMotion';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
@@ -13,7 +13,6 @@ import { Achievements } from './components/Achievements';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
-import { ResumeModal } from './components/ResumeModal';
 
 export default function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
@@ -24,8 +23,6 @@ export default function App() {
     }
     return 'light';
   });
-
-  const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -50,12 +47,11 @@ export default function App() {
       <Navbar
         theme={theme}
         toggleTheme={toggleTheme}
-        onOpenResume={() => setIsResumeOpen(true)}
       />
 
       {/* Main Content Sections */}
       <main className="relative z-10 space-y-12 sm:space-y-16">
-        <Hero onOpenResume={() => setIsResumeOpen(true)} />
+        <Hero />
         <About />
         <Education />
         <Skills />
@@ -73,11 +69,6 @@ export default function App() {
       {/* Floating Scroll to Top Button */}
       <ScrollToTop />
 
-      {/* Resume Modal */}
-      <ResumeModal
-        isOpen={isResumeOpen}
-        onClose={() => setIsResumeOpen(false)}
-      />
     </div>
   );
 }

@@ -99,7 +99,7 @@ export const Projects: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                  ) : (
+                  ) : project.image ? (
                     <div className="relative aspect-16/10 bg-gradient-to-b from-transparent to-gray-200/30 dark:to-gray-900/40 overflow-hidden flex items-center justify-center">
                       <SmartImage
                         baseName={project.id}
@@ -121,6 +121,20 @@ export const Projects: React.FC = () => {
                             {project.imageNote}
                           </p>
                         </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="relative aspect-16/10 bg-gradient-to-br from-blue-50 via-indigo-50 to-slate-100 dark:from-blue-950/40 dark:via-indigo-950/30 dark:to-slate-900/60 p-8 flex flex-col items-center justify-center text-center space-y-3">
+                      <div className="p-4 rounded-2xl bg-white dark:bg-gray-800 text-[#4285F4] shadow-xs">
+                        <LayoutGrid size={32} />
+                      </div>
+                      <div>
+                        <p className="text-sm font-bold text-gray-800 dark:text-gray-200">
+                          {project.imageLabel}
+                        </p>
+                        <p className="text-xs text-[#5F6368] dark:text-gray-400 mt-1 max-w-xs">
+                          {project.imageNote}
+                        </p>
                       </div>
                     </div>
                   )}

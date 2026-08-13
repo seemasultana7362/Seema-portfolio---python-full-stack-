@@ -4,7 +4,6 @@ import { Sun, Moon, FileText, Menu, X } from 'lucide-react';
 interface NavbarProps {
   theme: 'light' | 'dark';
   toggleTheme: () => void;
-  onOpenResume: () => void;
 }
 
 const NAV_ITEMS = [
@@ -20,7 +19,7 @@ const NAV_ITEMS = [
   { id: 'contact', label: 'Contact' },
 ];
 
-export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme, onOpenResume }) => {
+export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -105,13 +104,14 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme, onOpenResume
             {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
           </button>
 
-          <button
-            onClick={onOpenResume}
+          <a
+            href="/seema-sultana-resume.pdf"
+            download
             className="inline-flex items-center space-x-2 px-4 py-2 rounded-full text-xs font-semibold text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-700 hover:border-[#4285F4] dark:hover:border-[#4285F4] hover:bg-blue-50/50 dark:hover:bg-blue-950/20 transition-all duration-200 shadow-2xs"
           >
             <FileText size={14} className="text-[#4285F4]" />
             <span>Download Resume</span>
-          </button>
+          </a>
         </div>
 
         {/* Mobile Hamburger Button */}
@@ -151,16 +151,15 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme, onOpenResume
             </button>
           ))}
           <div className="pt-2 border-t border-gray-100 dark:border-gray-800">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenResume();
-              }}
+            <a
+              href="/seema-sultana-resume.pdf"
+              download
+              onClick={() => setMobileMenuOpen(false)}
               className="w-full flex items-center justify-center space-x-2 px-4 py-2.5 rounded-full text-sm font-semibold text-white bg-[#4285F4] hover:bg-blue-600 transition-colors shadow-xs"
             >
               <FileText size={16} />
               <span>Download Resume</span>
-            </button>
+            </a>
           </div>
         </div>
       )}
