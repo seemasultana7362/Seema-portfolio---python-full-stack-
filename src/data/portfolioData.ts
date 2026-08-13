@@ -33,6 +33,7 @@ export const PROJECTS_DATA: Project[] = [
       "Used secure aggregation for decentralized updates",
       "Measured accuracy, privacy, convergence, and communication overhead"
     ],
+    image: "/images/federated_iot.png",
     imageLabel: "Federated IoT Intrusion Detection",
     imageNote: "Privacy-preserving federated learning pipeline",
     github: "https://github.com/seemasultana7362/Federated-IoT",
