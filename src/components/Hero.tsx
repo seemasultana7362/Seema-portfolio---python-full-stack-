@@ -4,11 +4,7 @@ import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { SmartImage } from './SmartImage';
 
-interface HeroProps {
-  onOpenResume: () => void;
-}
-
-export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
+export const Hero: React.FC = () => {
   const scrollToProjects = () => {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -100,12 +96,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
               View Projects
             </button>
 
-            <button
-              onClick={onOpenResume}
+            <a
+              href="/seema-sultana-resume.pdf"
+              download
               className="w-full sm:w-auto px-7 py-3.5 rounded-full text-sm font-medium text-[#202124] dark:text-gray-100 border border-gray-300 dark:border-gray-700 hover:border-[#4285F4] dark:hover:border-[#4285F4] hover:bg-gray-50 dark:hover:bg-gray-800/60 transition-all duration-200 cursor-pointer"
             >
               Download Resume
-            </button>
+            </a>
           </motion.div>
 
           {/* Social Links */}

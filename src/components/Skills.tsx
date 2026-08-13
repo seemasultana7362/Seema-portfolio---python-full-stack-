@@ -8,9 +8,10 @@ export const Skills: React.FC = () => {
     Languages: Code,
     Frontend: Layout,
     Backend: Server,
-    Databases: Database,
-    'AI / Machine Learning': Brain,
-    'DevOps & Tools': Wrench,
+    Database: Database,
+    Frameworks: Brain,
+    Platforms: Wrench,
+    Tools: Wrench,
     'Soft Skills': MessageSquare,
   };
 

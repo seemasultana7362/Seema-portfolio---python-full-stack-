@@ -18,25 +18,25 @@ export const PERSONAL_INFO = {
 
 export const PROJECTS_DATA: Project[] = [
   {
-    id: "cognitive-compass",
-    title: "Cognitive Compass",
-    category: "AI • Multi-Agent Systems",
-    summary: "An AI-powered developer assistance platform that detects cognitive load, explains complex code visually, and preserves engineering knowledge for teams.",
-    problem: "Modern software projects become increasingly difficult to understand as systems grow in complexity. Developers often lose time understanding unfamiliar codebases, switching context, and repeatedly solving the same problems because organizational knowledge is scattered.",
-    solution: "Cognitive Compass addresses these challenges by using a multi-agent AI architecture that identifies signs of developer confusion, generates visual explanations of complex code, and preserves technical knowledge in a searchable system that future developers can access.",
+    id: "federated-iot",
+    title: "Privacy-Preserving Federated Learning for IoT Intrusion Detection",
+    category: "Federated Learning • Cybersecurity",
+    summary: "A privacy-preserving federated learning pipeline for detecting intrusions in distributed IoT environments.",
+    problem: "Centralizing IoT security data can expose sensitive information, while distributed devices need effective intrusion detection with manageable communication costs.",
+    solution: "Built a PyTorch and Flower pipeline on UNSW-NB15 with Differential Privacy, Secure Aggregation, and adaptive communication; evaluated accuracy, privacy, convergence, and communication overhead.",
     technologies: [
-      "React", "TypeScript", "Node.js", "GraphQL", "AWS Lambda", "Amazon Bedrock", "Amazon SageMaker", "Multi-Agent AI"
+      "Python", "PyTorch", "Flower", "Scikit-learn", "Opacus", "Secure Aggregation", "Differential Privacy", "Adaptive Communication"
     ],
     highlights: [
-      "Detects developer confusion in real time",
-      "Generates visual explanations for complex code",
-      "Creates a searchable organizational memory",
-      "Designed around AI-assisted software engineering workflows"
+      "Trained on the UNSW-NB15 intrusion-detection dataset",
+      "Applied Differential Privacy with Opacus",
+      "Used secure aggregation for decentralized updates",
+      "Measured accuracy, privacy, convergence, and communication overhead"
     ],
-    image: "/images/cognitive_compass.png",
-    imageLabel: "Cognitive Compass Screenshot",
-    imageNote: "Place cognitive_compass.png in public/images/",
-    github: "https://github.com/seemasultana7362/cognitive_compass",
+    image: "/images/federated_iot.png",
+    imageLabel: "Federated IoT Intrusion Detection",
+    imageNote: "Privacy-preserving federated learning pipeline",
+    github: "https://github.com/seemasultana7362/Federated-IoT",
     demo: "#"
   },
   {
@@ -93,23 +93,27 @@ export const SKILLS_DATA: SkillCategory[] = [
   },
   {
     category: "Frontend",
-    skills: ["React.js", "Next.js", "HTML5", "CSS3", "Tailwind CSS"]
+    skills: ["React.js", "Next.js", "Tailwind CSS"]
   },
   {
     category: "Backend",
     skills: ["FastAPI", "Django", "Flask", "REST APIs"]
   },
   {
-    category: "Databases",
-    skills: ["PostgreSQL", "MySQL"]
+    category: "Database",
+    skills: ["PostgreSQL", "MySQL", "MongoDB"]
   },
   {
-    category: "AI / Machine Learning",
+    category: "Frameworks",
     skills: ["NumPy", "Pandas", "Scikit-learn", "TensorFlow", "PyTorch", "XGBoost", "LangChain"]
   },
   {
-    category: "DevOps & Tools",
-    skills: ["Git", "GitHub", "GitHub Actions", "Docker"]
+    category: "Platforms",
+    skills: ["Linux", "Web", "Windows", "Arduino", "AWS", "IBM Cloud"]
+  },
+  {
+    category: "Tools",
+    skills: ["AWS EC2", "AWS S3", "AWS Lambda", "AWS IAM", "Amazon Bedrock", "Amazon SageMaker", "Git", "GitHub", "Docker"]
   },
   {
     category: "Soft Skills",
@@ -125,11 +129,10 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
     duration: "May 2026 – Present",
     location: "Bengaluru, India",
     description: [
-      "Completed multiple technical certifications through Study Jam activities to strengthen knowledge across cloud and development technologies.",
-      "Contributed to Python full-stack projects involving HTML, CSS, and database integration.",
-      "Collaborated with peers through technical learning initiatives and community activities."
+      "Completed multiple AWS certifications through Study Jam activities to strengthen cloud-technology knowledge.",
+      "Worked on a Cognitive Load Aware Multi-Agent AI system using multiple AWS tools."
     ],
-    technologies: ["Python", "HTML", "CSS", "Databases", "AWS"]
+    technologies: ["AWS", "Multi-Agent AI", "Amazon Bedrock", "Amazon SageMaker"]
   },
   {
     id: "embrizon-intern",
@@ -198,7 +201,7 @@ export const RESEARCH_DATA = {
   expectedPublication: "Expected IEEE publication (late 2026)",
   description: "The research explores privacy-preserving federated learning frameworks for IoT-based distributed data analytics, focusing on secure collaborative machine learning while maintaining data privacy.",
   technologies: [
-    "Python", "TensorFlow Federated", "TensorFlow", "Pandas", "NumPy", "Docker", "AWS", "MQTT"
+    "Python", "PyTorch", "Flower", "Scikit-learn", "Pandas", "NumPy", "Opacus", "Secure Aggregation", "Adaptive Communication"
   ]
 };
 
@@ -215,6 +218,6 @@ export const LEADERSHIP_DATA = [
     role: "Volunteer / Website Contributor",
     location: "Bengaluru",
     duration: "January 2026 – Present",
-    description: "Contributed to maintaining the official IEEE CSBC website and coordinated events including IEEE CS PRO 2026 and Girl Geek."
+    description: "Managing the official IEEE CSBC website and coordinating IEEE CS PRO 2026 and Girl Geek."
   }
 ];
