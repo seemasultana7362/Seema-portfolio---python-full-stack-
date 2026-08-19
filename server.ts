@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { spawn, ChildProcess } from 'child_process';
 import { createServer as createViteServer } from 'vite';
+import 'dotenv/config';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -107,7 +108,7 @@ async function main() {
   app.listen(PORT, '0.0.0.0', () => {
     console.log(`=======================================================`);
     console.log(`[Server] Portfolio Full-Stack Application running at:`);
-    console.log(`         http://0.0.0.0:${PORT}`);
+    console.log(`         http://localhost:${PORT}`);
     console.log(`         Proxying /api -> Python REST API (port ${PYTHON_PORT})`);
     console.log(`=======================================================`);
   });

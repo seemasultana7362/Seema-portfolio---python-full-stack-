@@ -6,6 +6,8 @@ import re
 import os
 import sys
 import logging
+import smtplib
+from email.message import EmailMessage
 from urllib.parse import parse_qs, urlparse
 
 # Configure Logging
@@ -312,6 +314,30 @@ class PortfolioAPIHandler(http.server.BaseHTTPRequestHandler):
                 conn.close()
 
                 logger.info("New contact message received ID %d from %s (%s)", msg_id, name, email)
+
+                # Send email if configured
+                email_address = os.environ.get("EMAIL_ADDRESS")
+                email_password = os.environ.get("EMAIL_PASSWORD")
+                
+                if email_address and email_password:
+                    try:
+                        msg = EmailMessage()
+                        msg['Subject'] = f"Portfolio Contact: {subject}"
+                        msg['From'] = email_address
+                        msg['To'] = email_address
+                        msg['Reply-To'] = email
+                        
+                        content = f"New message from your portfolio website:\n\nName: {name}\nEmail: {email}\n\nMessage:\n{message}"
+                        msg.set_content(content)
+                        
+                        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+                            smtp.login(email_address, email_password)
+                            smtp.send_message(msg)
+                        logger.info("Email sent successfully to %s", email_address)
+                    except Exception as email_err:
+                        logger.error("Failed to send email: %s", str(email_err))
+                else:
+                    logger.warning("EMAIL_ADDRESS or EMAIL_PASSWORD not set in environment, skipping email sending.")
 
                 self._send_json({
                     "success": True,

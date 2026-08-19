@@ -2,9 +2,9 @@ import { Project, SkillCategory, ExperienceItem, EducationItem, AchievementItem 
 
 export const PERSONAL_INFO = {
   name: "Seema Sultana",
-  title: "Computer Science Engineering Student • Python Full Stack Developer • Data Science Enthusiast & ML Model Building",
+  title: "Computer Science Engineering Student • Full Stack Developer • AI/ML & Distributed Systems Engineer",
   greeting: "HELLO, I'M",
-  intro: "I am a Computer Science Engineering student passionate about Python full-stack development, Data Science, and ML model building. My interests span building end-to-end web applications, predictive machine learning pipelines, cloud technologies, and research-driven innovation. I enjoy transforming complex data into actionable insights and scalable solutions while continuously learning and contributing to technical communities.",
+  intro: "I am a Computer Science Engineering student at HKBK College of Engineering passionate about building scalable full-stack applications, privacy-preserving ML systems, and distributed architectures. My interests span federated learning, agentic AI, cloud-native infrastructure, and research-driven innovation. I enjoy architecting end-to-end solutions, transforming complex data into actionable insights, and contributing to open-source communities and technical leadership initiatives.",
   email: "sultanaseema385@gmail.com",
   phone: "+91-8892872700",
   location: "Bengaluru, India",
@@ -76,12 +76,37 @@ export const PROJECTS_DATA: Project[] = [
       "Queries 4 live search engines simultaneously and deduplicates evidence",
       "Invokes Groq LLM (Llama 3.3 70B) per result for independent credibility verdicts with trust scores",
       "Achieved 91% accuracy in fabricated-claim detection",
+      "14% improvement in data trust scoring across web platforms",
       "Chrome Extension enables instant in-browser fact-checking on any webpage"
     ],
     image: "/images/factsphere.png",
     imageLabel: "FactSphere Architecture & Extension",
     imageNote: "Place factsphere.png in public/images/",
     github: "https://github.com/seemasultana7362/FactSphere-Hallucination-Aware-Multi-Agent-Search-Intelligence-Agentic-AI-LLM-NLP-Chrome-Extension-",
+    demo: "#"
+  },
+  {
+    id: "ecommerce-distributed",
+    title: "E-Commerce Distributed System Architecture",
+    category: "Distributed Systems • Microservices • Scalability",
+    summary: "A highly scalable distributed e-commerce platform engineered to support 25K+ concurrent users with optimized latency and fault tolerance through event-driven microservices and Kubernetes orchestration.",
+    problem: "Traditional monolithic e-commerce systems struggle to handle high concurrency, suffer from latency bottlenecks during peak traffic, and lack the resilience needed for mission-critical operations serving thousands of simultaneous users.",
+    solution: "Architected an event-driven microservices platform leveraging Apache Kafka for asynchronous event streaming, Redis for distributed caching, PostgreSQL with replication and sharding for database scalability, and Kubernetes for automatic load balancing and self-healing. Implemented Nginx reverse proxy and JWT authentication for secure, efficient request routing.",
+    technologies: [
+      "Python", "Node.js", "PostgreSQL", "Redis", "Docker", "Kubernetes", "Nginx", "REST APIs", "JWT", "Apache Kafka"
+    ],
+    highlights: [
+      "Architected microservices supporting 25K+ concurrent users",
+      "Reduced p95 latency by 30%+ through caching and load distribution",
+      "Implemented event-driven architecture using Apache Kafka for decoupled services",
+      "Applied PostgreSQL replication and sharding for horizontal database scalability",
+      "Deployed on Kubernetes with automated autoscaling and health management",
+      "Integrated Redis caching layer for sub-millisecond response times"
+    ],
+    image: "/images/ecommerce_distributed.jpg",
+    imageLabel: "E-Commerce Distributed Architecture",
+    imageNote: "Place ecommerce_distributed.jpg in public/images/",
+    github: "https://github.com/seemasultana7362/E-Commerce-Distributed-System-Architecture.git",
     demo: "#"
   }
 ];
@@ -97,7 +122,7 @@ export const SKILLS_DATA: SkillCategory[] = [
   },
   {
     category: "Backend",
-    skills: ["FastAPI", "Django", "Flask", "REST APIs"]
+    skills: ["FastAPI", "Django", "Flask", "Node.js", "REST APIs"]
   },
   {
     category: "Database",
@@ -116,6 +141,10 @@ export const SKILLS_DATA: SkillCategory[] = [
     skills: ["AWS EC2", "AWS S3", "AWS Lambda", "AWS IAM", "Amazon Bedrock", "Amazon SageMaker", "Git", "GitHub", "Docker"]
   },
   {
+    category: "Distributed Systems",
+    skills: ["Apache Kafka", "Kubernetes", "Nginx", "Docker Compose", "Microservices", "Event-Driven Architecture"]
+  },
+  {
     category: "Soft Skills",
     skills: ["Leadership", "Event Management", "Writing", "Public Speaking", "Time Management"]
   }
@@ -125,27 +154,28 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
   {
     id: "aws-co-lead",
     organization: "AWS Student Builder Group",
-    role: "Co-Lead",
+    role: "Co-Lead (Full-time)",
     duration: "May 2026 – Present",
-    location: "Bengaluru, India",
+    location: "Bengaluru, India (On Campus)",
     description: [
-      "Completed multiple AWS certifications through Study Jam activities to strengthen cloud-technology knowledge.",
-      "Worked on a Cognitive Load Aware Multi-Agent AI system using multiple AWS tools."
+      "Engineered cloud-native solutions leveraging scalable AWS infrastructure tools (EC2, S3, Lambda, Bedrock, SageMaker).",
+      "Delivered technical consultations to guide peers through cloud implementation strategies and best practices.",
+      "Led initiatives to promote cloud adoption and AWS technologies within the engineering community."
     ],
-    technologies: ["AWS", "Multi-Agent AI", "Amazon Bedrock", "Amazon SageMaker"]
+    technologies: ["AWS", "EC2", "S3", "Lambda", "Bedrock", "SageMaker", "Cloud Architecture"]
   },
   {
     id: "embrizon-intern",
     organization: "Embrizon Technologies",
-    role: "Data Science with AI Intern",
+    role: "Data Science Internship (AI)",
     duration: "February 2026 – April 2026",
     location: "Remote",
     description: [
-      "Worked on a Customer Churn Prediction project involving data cleaning and feature engineering.",
-      "Trained classification models including Logistic Regression, Random Forest, and XGBoost.",
-      "Emphasized practical machine learning workflows and explainable data analytics."
+      "Consulted on technical delivery of end-to-end predictive analytics pipelines from data collection to model deployment.",
+      "Architected full-stack data dashboards using Python and visualization frameworks to guide stakeholders through cloud implementation strategies.",
+      "Developed and deployed classification models for customer behavior prediction and business intelligence applications."
     ],
-    technologies: ["Python", "Scikit-learn", "XGBoost", "Machine Learning", "Data Analysis"]
+    technologies: ["Python", "Pandas", "Scikit-learn", "XGBoost", "Data Analytics", "Predictive Modeling"]
   }
 ];
 
