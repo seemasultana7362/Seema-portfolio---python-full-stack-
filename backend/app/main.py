@@ -169,7 +169,7 @@ EXPERIENCE_DATA = [
 
 EDUCATION_DATA = [
     {
-        "institution": "HKBK College of Engineering",
+        "institution": "Visvesvaraya Technological University",
         "qualification": "Bachelor of Engineering — Computer Science & Engineering",
         "affiliation": "VTU",
         "duration": "September 2023 – Present",

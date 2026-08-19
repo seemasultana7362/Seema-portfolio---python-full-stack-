@@ -4,14 +4,14 @@ export const PERSONAL_INFO = {
   name: "Seema Sultana",
   title: "Computer Science Engineering Student • Full Stack Developer • AI/ML & Distributed Systems Engineer",
   greeting: "HELLO, I'M",
-  intro: "I am a Computer Science Engineering student at HKBK College of Engineering passionate about building scalable full-stack applications, privacy-preserving ML systems, and distributed architectures. My interests span federated learning, agentic AI, cloud-native infrastructure, and research-driven innovation. I enjoy architecting end-to-end solutions, transforming complex data into actionable insights, and contributing to open-source communities and technical leadership initiatives.",
+  intro: "I am a Computer Science Engineering student at Visvesvaraya Technological University passionate about building scalable full-stack applications, privacy-preserving ML systems, and distributed architectures. My interests span federated learning, agentic AI, cloud-native infrastructure, and research-driven innovation. I enjoy architecting end-to-end solutions, transforming complex data into actionable insights, and contributing to open-source communities and technical leadership initiatives.",
   email: "sultanaseema385@gmail.com",
   phone: "+91-8892872700",
   location: "Bengaluru, India",
   github: "https://github.com/seemasultana7362",
   linkedin: "https://www.linkedin.com/in/seemasultana385",
   profileImage: "/images/profile.jpeg",
-  educationInstitution: "HKBK College of Engineering (VTU)",
+  educationInstitution: "Visvesvaraya Technological University",
   degree: "B.E. Computer Science & Engineering",
   gpa: "8.25 GPA",
 };
@@ -181,7 +181,7 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
 
 export const EDUCATION_DATA: EducationItem[] = [
   {
-    institution: "HKBK College of Engineering",
+    institution: "Visvesvaraya Technological University",
     qualification: "Bachelor of Engineering — Computer Science & Engineering",
     affiliation: "VTU",
     duration: "September 2023 – Present",

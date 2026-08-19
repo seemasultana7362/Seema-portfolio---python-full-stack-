@@ -11,7 +11,7 @@ export const About: React.FC = () => {
     },
     {
       title: 'Current Institution',
-      value: 'HKBK College of Engineering (VTU)',
+      value: 'Visvesvaraya Technological University',
       icon: Building2,
     },
     {
@@ -67,7 +67,7 @@ export const About: React.FC = () => {
 
           <div className="space-y-4 text-base sm:text-lg text-[#5F6368] dark:text-gray-300 leading-relaxed">
             <p>
-              I am a Computer Science Engineering student at HKBK College of Engineering (VTU) with a strong foundation in computer science principles, software engineering methodologies, artificial intelligence, and modern web development.
+              I am a Computer Science Engineering student at Visvesvaraya Technological University with a strong foundation in computer science principles, software engineering methodologies, artificial intelligence, and modern web development.
             </p>
             <p>
               My technical journey focuses on building robust systems from frontend user interfaces to backend REST APIs and intelligent machine learning models. Through hands-on internships, hackathons, open-source community contributions, and ongoing academic research, I continuously turn theoretical concepts into production-grade solutions.
