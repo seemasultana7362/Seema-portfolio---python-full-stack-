@@ -2,7 +2,7 @@ import { Project, SkillCategory, ExperienceItem, EducationItem, AchievementItem 
 
 export const PERSONAL_INFO = {
   name: "Seema Sultana",
-  title: "Computer Science Engineering Student • Full Stack Developer • AI/ML & Distributed Systems Engineer",
+  title: "Computer Science Engineering Student • Full Stack Developer • AI/ML & Data Engineer",
   greeting: "HELLO, I'M",
   intro: "I am a Computer Science Engineering student at Visvesvaraya Technological University passionate about building scalable full-stack applications, privacy-preserving ML systems, and distributed architectures. My interests span federated learning, agentic AI, cloud-native infrastructure, and research-driven innovation. I enjoy architecting end-to-end solutions, transforming complex data into actionable insights, and contributing to open-source communities and technical leadership initiatives.",
   email: "sultanaseema385@gmail.com",
@@ -17,6 +17,28 @@ export const PERSONAL_INFO = {
 };
 
 export const PROJECTS_DATA: Project[] = [
+  {
+    id: "mulberry-hotel",
+    title: "Mulberry Shades Nandi Hills — Full Stack Hotel Booking Website",
+    category: "Full Stack • MERN Stack • Live Deployed",
+    summary: "A deployed full-stack MERN web application for Mulberry Shades Nandi Hills, a resort near Bengaluru, presenting the property and its offerings in a responsive, modern interface.",
+    problem: "Hotels and resorts need a fast, polished online presence where guests can explore the property and its offerings easily on any device.",
+    solution: "Built and deployed a MERN stack (MongoDB, Express.js, React, Node.js) application with a responsive front end and a REST API back end, hosted live on Vercel.",
+    technologies: [
+      "MongoDB", "Express.js", "React.js", "Node.js", "REST APIs", "Vercel"
+    ],
+    highlights: [
+      "End-to-end MERN stack application",
+      "Deployed live on Vercel",
+      "Responsive, mobile-friendly UI",
+      "REST API back end with MongoDB"
+    ],
+    image: "/images/mulberry_hotel.png",
+    imageLabel: "Mulberry Shades Nandi Hills",
+    imageNote: "Live deployed MERN stack hotel website",
+    github: "",
+    demo: "https://mernstack-project-mulberry-hotel.vercel.app/#home"
+  },
   {
     id: "federated-iot",
     title: "Privacy-Preserving Federated Learning for IoT Intrusion Detection",
@@ -83,30 +105,6 @@ export const PROJECTS_DATA: Project[] = [
     imageLabel: "FactSphere Architecture & Extension",
     imageNote: "Place factsphere.png in public/images/",
     github: "https://github.com/seemasultana7362/FactSphere-Hallucination-Aware-Multi-Agent-Search-Intelligence-Agentic-AI-LLM-NLP-Chrome-Extension-",
-    demo: "#"
-  },
-  {
-    id: "ecommerce-distributed",
-    title: "E-Commerce Distributed System Architecture",
-    category: "Distributed Systems • Microservices • Scalability",
-    summary: "A highly scalable distributed e-commerce platform engineered to support 25K+ concurrent users with optimized latency and fault tolerance through event-driven microservices and Kubernetes orchestration.",
-    problem: "Traditional monolithic e-commerce systems struggle to handle high concurrency, suffer from latency bottlenecks during peak traffic, and lack the resilience needed for mission-critical operations serving thousands of simultaneous users.",
-    solution: "Architected an event-driven microservices platform leveraging Apache Kafka for asynchronous event streaming, Redis for distributed caching, PostgreSQL with replication and sharding for database scalability, and Kubernetes for automatic load balancing and self-healing. Implemented Nginx reverse proxy and JWT authentication for secure, efficient request routing.",
-    technologies: [
-      "Python", "Node.js", "PostgreSQL", "Redis", "Docker", "Kubernetes", "Nginx", "REST APIs", "JWT", "Apache Kafka"
-    ],
-    highlights: [
-      "Architected microservices supporting 25K+ concurrent users",
-      "Reduced p95 latency by 30%+ through caching and load distribution",
-      "Implemented event-driven architecture using Apache Kafka for decoupled services",
-      "Applied PostgreSQL replication and sharding for horizontal database scalability",
-      "Deployed on Kubernetes with automated autoscaling and health management",
-      "Integrated Redis caching layer for sub-millisecond response times"
-    ],
-    image: "/images/ecommerce_distributed.jpg",
-    imageLabel: "E-Commerce Distributed Architecture",
-    imageNote: "Place ecommerce_distributed.jpg in public/images/",
-    github: "https://github.com/seemasultana7362/E-Commerce-Distributed-System-Architecture.git",
     demo: "#"
   }
 ];
