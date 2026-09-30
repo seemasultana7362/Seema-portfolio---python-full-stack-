@@ -195,15 +195,28 @@ export const Projects: React.FC = () => {
 
                 {/* Buttons */}
                 <div className="flex flex-wrap items-center gap-3 pt-3">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full text-xs font-semibold text-white bg-[#4285F4] hover:bg-blue-600 active:bg-blue-700 transition-all shadow-2xs hover:shadow-xs"
-                  >
-                    <Github size={14} />
-                    <span>View GitHub Repository</span>
-                  </a>
+                  {project.demo && project.demo !== '#' && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full text-xs font-semibold text-white bg-[#34A853] hover:bg-green-600 active:bg-green-700 transition-all shadow-2xs hover:shadow-xs"
+                    >
+                      <ExternalLink size={14} />
+                      <span>View Live Demo</span>
+                    </a>
+                  )}
+                  {project.github && project.github !== '#' && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full text-xs font-semibold text-white bg-[#4285F4] hover:bg-blue-600 active:bg-blue-700 transition-all shadow-2xs hover:shadow-xs"
+                    >
+                      <Github size={14} />
+                      <span>View GitHub Repository</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>
