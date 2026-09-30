@@ -119,7 +119,7 @@ export const SKILLS_DATA: SkillCategory[] = [
   },
   {
     category: "Backend",
-    skills: ["FastAPI", "Django", "Flask", "Node.js", "REST APIs"]
+    skills: ["FastAPI", "Node.js", "REST APIs"]
   },
   {
     category: "Database",
@@ -136,10 +136,6 @@ export const SKILLS_DATA: SkillCategory[] = [
   {
     category: "Tools",
     skills: ["AWS EC2", "AWS S3", "AWS Lambda", "AWS IAM", "Amazon Bedrock", "Amazon SageMaker", "Git", "GitHub", "Docker"]
-  },
-  {
-    category: "Distributed Systems",
-    skills: ["Apache Kafka", "Kubernetes", "Nginx", "Docker Compose", "Microservices", "Event-Driven Architecture"]
   },
   {
     category: "Soft Skills",
