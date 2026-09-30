@@ -11,9 +11,10 @@ Place your custom pictures in this folder. Any image you drop here with the corr
 ---
 
 ## 💻 Project Screenshot Placeholders
-- **Cognitive Compass**: `public/images/cognitive_compass.jpg`
+- **Mulberry Shades — Luxury Resort Web Platform**: `public/images/cognitive_compass.jpg`
 - **Customer Churn Prediction**: `public/images/customer_churn.jpg`
-- **Developer Portfolio Website**: `public/images/portfolio.jpg`
+- **DOC-CHAT-AI — Citation-First Document QA System**: `public/images/portfolio.jpg`
+- **Privacy-Preserving Federated Learning for IoT Intrusion Detection**: 
 
 ---
 
