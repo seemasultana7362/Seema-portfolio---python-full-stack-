@@ -1,49 +1,14 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { ABOUT_DATA } from '../data/portfolioData';
 import { Target, Cpu, Lightbulb, Users, GraduationCap, Building2, Compass, MapPin } from 'lucide-react';
 
 export const About: React.FC = () => {
-  const quickFacts = [
-    {
-      title: 'Education',
-      value: 'B.E. Computer Science & Engineering',
-      icon: GraduationCap,
-    },
-    {
-      title: 'Current Institution',
-      value: 'Visvesvaraya Technological University',
-      icon: Building2,
-    },
-    {
-      title: 'Primary Interests',
-      value: 'Full Stack • AI/ML • Cloud',
-      icon: Compass,
-    },
-    {
-      title: 'Location',
-      value: 'Bengaluru, India',
-      icon: MapPin,
-    },
-  ];
+  const factIcons = [GraduationCap, Building2, Compass, MapPin];
+  const quickFacts = ABOUT_DATA.facts.map((f, i) => ({ ...f, icon: factIcons[i] }));
 
-  const principles = [
-    {
-      text: 'Build solutions with purpose.',
-      icon: Target,
-    },
-    {
-      text: 'Keep learning through practice.',
-      icon: Cpu,
-    },
-    {
-      text: 'Simplify complex problems.',
-      icon: Lightbulb,
-    },
-    {
-      text: 'Contribute to technical communities.',
-      icon: Users,
-    },
-  ];
+  const principleIcons = [Target, Cpu, Lightbulb, Users];
+  const principles = ABOUT_DATA.principles.map((text, i) => ({ text, icon: principleIcons[i] }));
 
   return (
     <section id="about" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -61,17 +26,14 @@ export const About: React.FC = () => {
               ABOUT
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#202124] dark:text-gray-100 mt-2 leading-tight">
-              Building technology that is practical, intelligent, and impactful.
+              {ABOUT_DATA.heading}
             </h2>
           </div>
 
           <div className="space-y-4 text-base sm:text-lg text-[#5F6368] dark:text-gray-300 leading-relaxed">
-            <p>
-              I am a Computer Science Engineering student at Visvesvaraya Technological University with a strong foundation in computer science principles, software engineering methodologies, artificial intelligence, and modern web development.
-            </p>
-            <p>
-              My technical journey focuses on building robust systems from frontend user interfaces to backend REST APIs and intelligent machine learning models. Through hands-on internships, hackathons, open-source community contributions, and ongoing academic research, I continuously turn theoretical concepts into production-grade solutions.
-            </p>
+            {ABOUT_DATA.paragraphs.map((para) => (
+              <p key={para}>{para}</p>
+            ))}
           </div>
 
           {/* Quick Facts Grid (2x2) */}
