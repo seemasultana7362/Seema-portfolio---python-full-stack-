@@ -1,20 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'motion/react';
 import { Mail, Phone, Github, Linkedin, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
-import { ContactFormData } from '../types';
+import { useContactForm } from '../hooks/useContactForm';
 
 export const Contact: React.FC = () => {
-  const [formData, setFormData] = useState<ContactFormData>({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const { formData, loading, success, error, handleChange, handleSubmit } = useContactForm();
 
   const contactItems = [
     {
@@ -42,55 +33,6 @@ export const Contact: React.FC = () => {
       icon: Linkedin,
     },
   ];
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-    if (error) setError(null);
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setSuccess(null);
-    setError(null);
-
-    // Basic Validation
-    if (!formData.name.trim() || !formData.email.trim() || !formData.subject.trim() || !formData.message.trim()) {
-      setError('Please fill in all fields before submitting.');
-      return;
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      setError('Please provide a valid email address.');
-      return;
-    }
-
-    setLoading(true);
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (response.ok && data.success) {
-        setSuccess(data.message || 'Thank you for getting in touch! Your message has been received.');
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        setError(data.error || 'Something went wrong. Please try again later.');
-      }
-    } catch (err) {
-      console.error('Contact form submission error:', err);
-      // Fallback optimistic message in dev container
-      setSuccess('Thank you for getting in touch! Your message has been received.');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } finally {
-      setLoading(false);
-    }
-  };
 
   return (
     <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
