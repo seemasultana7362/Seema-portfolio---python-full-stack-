@@ -26,7 +26,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: "federated-iot",
     title: "Privacy-Preserving Federated Learning for IoT Intrusion Detection",
-    category: "Federated Learning • Cybersecurity",
+    category: "Federated Learning • Cybersecurity • PyTorch • Data Analytics",
     summary: "A privacy-preserving federated learning pipeline for detecting intrusions in distributed IoT environments.",
     problem: "Centralizing IoT security data can expose sensitive information, while distributed devices need effective intrusion detection with manageable communication costs.",
     solution: "Built a PyTorch and Flower pipeline on UNSW-NB15 with Differential Privacy, Secure Aggregation, and adaptive communication; evaluated accuracy, privacy, convergence, and communication overhead.",

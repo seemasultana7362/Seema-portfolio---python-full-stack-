@@ -6,7 +6,7 @@ export const ABOUT_DATA = {
   facts: [
     { title: 'Education', value: 'B.E. Computer Science & Engineering' },
     { title: 'Current Institution', value: 'Visvesvaraya Technological University' },
-    { title: 'Primary Interests', value: 'Full Stack • AI/ML • Cloud' },
+    { title: 'Primary Interests', value: 'Full Stack • AI/ML • Data Engineering' },
     { title: 'Location', value: 'Bengaluru, India' },
   ],
   principles: [
