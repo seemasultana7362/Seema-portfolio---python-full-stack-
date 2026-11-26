@@ -1,7 +1,6 @@
 export const ABOUT_DATA = {
   heading: 'Building technology that is practical, intelligent, and impactful.',
   paragraphs: [
-    'I am a Computer Science Engineering student at Visvesvaraya Technological University with a strong foundation in computer science principles, software engineering methodologies, artificial intelligence, and modern web development.',
     'My technical journey focuses on building robust systems from frontend user interfaces to backend REST APIs and intelligent machine learning models. Through hands-on internships, hackathons, open-source community contributions, and ongoing academic research, I continuously turn theoretical concepts into production-grade solutions.',
   ],
   facts: [
